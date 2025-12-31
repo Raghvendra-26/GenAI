@@ -1,29 +1,30 @@
 # From Python Foundations to Applied GenAI 🚀
 
-This repository documents my structured learning journey where I am **revisiting and strengthening Python programming fundamentals** as a deliberate step toward becoming a **job-ready Applied Generative AI Developer**.
+This repository documents my structured learning journey where I am **revisiting and strengthening Python programming fundamentals** with depth and clarity, as a deliberate step toward becoming a **job-ready Applied Generative AI Engineer**.
 
-The focus is on **deep understanding, clean code, and project-first learning**, ensuring strong foundations before moving into advanced GenAI systems such as LLMs, RAG, and AI agents.
+The focus is on **thinking in data structures, writing clean logic, and building real systems**, rather than rushing into tools without strong foundations.
 
 ---
 
 ## 🎯 Goal of This Journey
-- Strengthen core programming fundamentals
+- Build strong Python fundamentals with real understanding
 - Think and solve problems like a software engineer
-- Write clean, reusable, and structured Python code
-- Build real, hands-on projects from Day 1
-- Develop confidence in problem solving and logic
-- Transition into Applied Generative AI roles
+- Model real-world data using proper data structures
+- Write clean, reusable, and testable code
+- Prepare for backend, API, and Applied GenAI roles
 - Be interview-ready with strong fundamentals and projects
 
 ---
 
 ## 🧠 Learning Philosophy
-- Learn by building, not memorizing
-- Revise fundamentals intentionally and deeply
-- Focus on **why** concepts exist, not just **how**
+- Learn concepts **deeply**, not superficially
+- Always understand:
+  - What data exists
+  - How it should be structured
+  - What operation needs to be performed
+- Project-first and logic-first learning
 - One responsibility per function
-- Data-first and logic-first design
-- Strong foundations before GenAI abstractions
+- Strong foundations before advanced GenAI abstractions
 - Consistent progress tracked via GitHub
 
 ---
@@ -89,23 +90,43 @@ The focus is on **deep understanding, clean code, and project-first learning**, 
 
 ---
 
-### ✅ Day 5 – Data Structures (Lists & Tuples)
+### ✅ Day 5 – Data Structures: Lists & Tuples
 **Concepts Covered:**
-- What data structures are and why they matter
+- Why data structures exist
 - Lists: creation, indexing, looping, modification
-- Lists with functions
-- Input validation and edge-case handling
+- Lists combined with functions
+- Input validation and edge-case thinking
 - Tuples and immutability
 - Data-driven program design
 
 **Mini Projects / Exercises:**
-- Student Management System (list-based, menu-driven)
+- Student Management System
 - Find minimum and maximum from a list
 - Student Marks System:
-  - Add marks
-  - Calculate total marks
-  - Calculate average marks
-  - Find highest marks
+  - Total marks
+  - Average marks
+  - Highest marks
+
+---
+
+### ✅ Day 6 – Data Structures: Dictionaries & Real-World Modeling
+**Concepts Covered:**
+- Dictionaries (key → value mapping)
+- Safe data access using `.get()`
+- Looping through dictionaries
+- Lists of dictionaries
+- Modeling real-world entities
+- Thinking in data schemas (similar to JSON & APIs)
+
+**Assignments / Exercises:**
+- User type checker (Adult / Minor) using dictionary data
+- Inventory value calculation using a list of product dictionaries
+
+**Mini Project:**
+- User Profile Manager  
+  - Add users  
+  - View users  
+  - Search users by email  
 
 ---
 
@@ -116,23 +137,22 @@ The focus is on **deep understanding, clean code, and project-first learning**, 
 ---
 
 ## 📌 Upcoming Topics
-- Dictionaries and nested data structures
 - File handling (read/write)
-- Working with JSON
-- APIs and backend-style Python
-- Automation scripts
+- JSON data storage
+- Persisting dictionaries to files
+- Backend-style Python programming
+- APIs and structured data exchange
 - Applied Generative AI fundamentals
 - Prompt engineering
 - RAG systems and AI agents
-- Deployment and interview preparation
 
 ---
 
 ## 📈 Why This Repository Matters
-This repository reflects:
+This repository represents:
 - Consistent daily progress
-- Strong engineering fundamentals
-- Deep understanding of core concepts
+- Strong problem-solving mindset
+- Deep understanding of core programming concepts
 - Real project-based learning
 - A clear and intentional transition toward Applied GenAI
 
