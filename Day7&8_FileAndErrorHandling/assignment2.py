@@ -3,8 +3,14 @@
 import json
 
 #loading products at startup
-with open("products.json","r") as file:      # will produce a error if file is not present
-    products = json.load(file)
+try:
+    with open("products.json","r") as file:      
+        try:
+            products = json.load(file)
+        except json.JSONDecodeError:
+            products=[]
+except FileNotFoundError:
+    products=[]
     
 
 def calculate_inventory_value(products):
@@ -20,8 +26,17 @@ def calculate_inventory_value(products):
 def add_product():
     
     name = input("Enter product name: ").strip()
-    price = int(input("Enter price: "))
-    quantity = int(input("Enter quantity: "))
+    try:
+        price = int(input("Enter price: "))
+        quantity = int(input("Enter quantity: "))
+    except ValueError:
+        print("Enter a valid number")
+        return
+    
+    if price < 0 or quantity < 0:
+        print("Price and quantity must be non-negative")
+        return
+
     
     product = {
         "name":name,

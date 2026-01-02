@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Apple watch",
+        "price": 20000,
+        "quantity": 5
+    },
+    {
+        "name": "Samsung galaxy s17",
+        "price": 100000,
+        "quantity": 10
+    }
+]

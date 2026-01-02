@@ -6,7 +6,11 @@ import json
 def add_user():
     
     name = input("Enter username: ").strip()
-    age = int(input("Enter user age: "))
+    try:
+        age = int(input("Enter user age: "))
+    except ValueError:
+        print("Please enter a valid number")
+        return
     email = input("Enter user email: ").strip()
     
     user = {
@@ -48,12 +52,15 @@ def find_user():
     
 
 # loading from file at startup
-with open("users.json","r") as file:         # will produce a error if file not present
-        if file:
+try:                                                #to prevent error if file is not present
+    with open("users.json","r") as file:         
+        try:                                         # to prevent error if json is bad
             users = json.load(file)
-        else:
+        except json.JSONDecodeError:
+            print("Data file corrupted, starting fresh")
             users = []
-
+except FileNotFoundError:
+    users=[]
 
 while True:
     print("\n--- User Profile Manager ---")
