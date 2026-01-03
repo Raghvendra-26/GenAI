@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Headphone",
+        "price": 1500,
+        "quantity": 50
+    },
+    {
+        "name": "Earphones",
+        "price": 500,
+        "quantity": 10
+    }
+]
