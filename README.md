@@ -153,17 +153,65 @@ The goal is not speed or tool-chasing, but:
 
 ---
 
+### ✅ Day 9 – Refactoring & Code Organization
+**Concepts Covered:**
+- Why large scripts don’t scale
+- Refactoring without changing behavior
+- Separating concerns:
+  - Main execution logic
+  - Business logic
+  - Storage/persistence
+- Avoiding global state
+- Writing import-safe modules
+- Passing data explicitly instead of relying on shared state
+
+**Practice:**
+- Refactored User Profile Manager into multiple modules
+- Refactored Marks system into clean, reusable components
+
+**Key Learning Outcome:**
+- Understanding how real codebases are structured
+- Thinking in terms of maintainability, not just correctness
+
+---
+
+### ✅ Day 10 – Command Line Interfaces & Argument Parsing
+**Concepts Covered:**
+- How command-line programs actually work
+- Understanding `sys.argv` deeply
+- Difference between:
+  - Script name
+  - Commands
+  - Flags and values
+- Manual flag parsing (from first principles)
+- Validating required flags
+- Safe type conversion from CLI input
+- Designing non-interactive, automation-ready scripts
+
+**Practice:**
+- Built CLI-style programs using:
+  - Commands (`add`, `list`, `summary`)
+  - Flags (`--name`, `--age`, `--value`, etc.)
+- Ensured graceful failure for incorrect CLI usage
+
+**Key Learning Outcome:**
+- Confidence in building real CLI tools
+- Foundation for backend automation and GenAI pipelines
+
+---
+
 ## 🛠️ Tech Stack (So Far)
 - Python 🐍
 - Git & GitHub
 - JSON (data persistence)
+- Command-line interfaces
 - Defensive programming patterns
 
 ---
 
 ## 📌 Upcoming Focus Areas
-- Code organization and modules
-- Automation with scripts
+- Logging and debugging practices
+- Scalable CLI architectures
 - Backend-style project structuring
 - APIs and data exchange
 - Applied Generative AI foundations
@@ -182,4 +230,4 @@ This repository demonstrates:
 ---
 
 **Status:** 🚧 In Progress  
-**Last Updated:** Day 8
+**Last Updated:** Day 10
