@@ -8,5 +8,10 @@
         "name": "Earphones",
         "price": 500,
         "quantity": 10
+    },
+    {
+        "name": "Camera",
+        "price": 50000,
+        "quantity": 10
     }
 ]

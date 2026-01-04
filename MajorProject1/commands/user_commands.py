@@ -1,4 +1,5 @@
 from storage.json_store import load_json,save_json
+from utils.logger import logger
 import sys
 
 file_path = "data/users.json"
@@ -7,13 +8,13 @@ def list_users():
     users = load_json(file_path)
     
     if not users:
-        print("No users found")
+        logger.error("No users found")
         return
     
     for index,user in enumerate(users,start=1):
-        print(f'\nUser {index}')
+        logger.info(f'\nUser {index}')
         for key,value in user.items():
-            print(f"{key}: {value}")
+            logger.info(f"{key}: {value}")
 
 
 def add_user():
@@ -26,7 +27,7 @@ def add_user():
     while i < len(args):
         
         if i + 1 >= len(args):
-            print(f"Missing value for flag {args[i]}")
+            logger.error(f"Missing value for flag {args[i]}")
             return
 
         key = args[i]
@@ -38,13 +39,13 @@ def add_user():
     required = ["name","age","email"]
     for r in required:
         if r not in flags:
-            print(f"Missing required flag: --{r}")
+            logger.error(f"Missing required flag: --{r}")
             return
     
     try:
         age = int(flags["age"])
     except ValueError:
-        print("Age must be a number")
+        logger.error("Age must be a number")
         return
     
     flags["age"] = age

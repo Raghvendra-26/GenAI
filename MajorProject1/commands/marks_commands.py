@@ -1,4 +1,5 @@
 from storage.json_store import load_json,save_json
+from utils.logger import logger
 import sys
 
 file_path = "data/marks.json"
@@ -12,7 +13,7 @@ def add_mark():
     
     while i < len(args):
         if i+1 >= len(args):
-            print(f"Missing value for flag {args[i]}")
+            logger.error(f"Missing value for flag {args[i]}")
             return
         
         key = args[i]
@@ -22,14 +23,14 @@ def add_mark():
         i+=2
 
     if "value" not in flags:
-        print(f"Missing required flag: --value")
+        logger.error(f"Missing required flag: --value")
         return
     
     try:
         mark = int(flags["value"])
         marks.append(mark)
     except ValueError:
-        print("Mark value must be a number")
+        logger.error("Mark value must be a number")
         return
 
     save_json(file_path,marks)
@@ -39,7 +40,7 @@ def marks_summary():
     marks = load_json(file_path)
     
     if not marks:
-        print("No marks data found")
+        logger.error("No marks data found")
         return
     
     total_marks = 0
@@ -49,5 +50,5 @@ def marks_summary():
     
     average_marks = total_marks/len(marks)
 
-    print("Total marks: ",total_marks)
-    print("Average marks: ",average_marks)
+    logger.info("Total marks: %s",total_marks)
+    logger.info("Average marks: %s",average_marks)

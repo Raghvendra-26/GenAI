@@ -3,10 +3,11 @@ import sys
 from commands.user_commands import list_users,add_user
 from commands.marks_commands import add_mark,marks_summary
 from commands.product_commands import add_product,inventory_value
+from utils.logger import logger
 
 def main():
     if len(sys.argv) < 2 :
-        print("Usage: python main.py <command>")
+        logger.error("Usage: python main.py <command>")
         return
     
     command = sys.argv[1]

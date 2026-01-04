@@ -1,4 +1,5 @@
 from storage.json_store import load_json, save_json
+from utils.logger import logger
 import sys
 
 file_path = "data/products.json"
@@ -12,7 +13,7 @@ def add_product():
     
     while i < len(args):
         if i+1 >= len(args):
-            print(f"Missing value for flag {args[i]}")
+            logger.error(f"Missing value for flag {args[i]}")
             return
         
         key = args[i]
@@ -25,14 +26,14 @@ def add_product():
 
     for r in required:
         if r not in flags:
-            print(f"Missing required flag: --{r}")
+            logger.error(f"Missing required flag: --{r}")
             return
     
     try:
         price = int(flags["price"])
         quantity = int(flags["quantity"])
     except ValueError:
-        print(f"Price and Quantity must be a number")
+        logger.error(f"Price and Quantity must be a number")
         return
 
     flags["price"] = price
@@ -46,7 +47,7 @@ def inventory_value():
     products = load_json(file_path)
     
     if not products:
-        print("No products in inventory")
+        logger.error("No products in inventory")
         return
     
     total_inventory_value = 0
@@ -57,4 +58,4 @@ def inventory_value():
 
         total_inventory_value += price * quantity
         
-    print("Total inventory value: ",total_inventory_value)
+    logger.info("Total inventory value: %s",total_inventory_value)
