@@ -200,6 +200,73 @@ The goal is not speed or tool-chasing, but:
 
 ---
 
+### ✅ Day 11 – Logging, Debugging & Observability
+**Concepts Covered:**
+- Why `print()` is insufficient for real systems
+- Introduction to structured logging
+- Logging levels (`INFO`, `ERROR`)
+- Difference between printing and logging
+- Understanding how backend systems are debugged
+- Observability as a core engineering concept
+
+**What I Implemented:**
+- Centralized logging utility
+- Replaced `print()` statements with structured logs
+- Added logging across:
+  - User commands
+  - Marks commands
+  - Product commands
+  - CLI command routing (`main.py`)
+- Logged:
+  - Command execution flow
+  - Validation failures
+  - Successful operations
+
+**Key Learning Outcome:**
+- Logging is not about visibility, but traceability
+- Debugging should rely on logs, not guesswork
+- Production systems explain failures clearly instead of crashing silently
+
+---
+
+### ✅ Day 12 – Testing, Validation & Code Confidence
+**Concepts Covered:**
+- What testing actually means (logic verification, not manual runs)
+- Difference between logic and side effects
+- Function contracts (what inputs are allowed)
+- Intentional vs accidental failures
+- Testing both success paths and failure paths
+- Writing pure, testable functions
+
+**What I Implemented:**
+- Extracted pure logic from CLI-driven code
+- Wrote manual tests using `assert`
+- Added explicit validation rules inside logic functions
+- Tested edge cases such as:
+  - Empty data
+  - Invalid input
+- Wrote tests for:
+  - Marks summary calculation
+  - Inventory value calculation
+
+**Key Learning Outcome:**
+- Correct code is not enough — behavior must be defined
+- Functions should fail intentionally and predictably
+- Testing builds confidence to refactor and extend systems safely
+- These principles are critical for reliable GenAI pipelines
+
+---
+
+**Current Readiness After Day 12:**
+- Backend-style system thinking
+- Robust input validation
+- Observability through logging
+- Confidence through testing
+- Strong foundation for safe GenAI integration
+
+---
+
+
 ## 🛠️ Tech Stack (So Far)
 - Python 🐍
 - Git & GitHub
@@ -210,7 +277,6 @@ The goal is not speed or tool-chasing, but:
 ---
 
 ## 📌 Upcoming Focus Areas
-- Logging and debugging practices
 - Scalable CLI architectures
 - Backend-style project structuring
 - APIs and data exchange
@@ -230,4 +296,4 @@ This repository demonstrates:
 ---
 
 **Status:** 🚧 In Progress  
-**Last Updated:** Day 10
+**Last Updated:** Day 12
