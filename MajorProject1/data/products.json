@@ -13,5 +13,10 @@
         "name": "Camera",
         "price": 50000,
         "quantity": 10
+    },
+    {
+        "name": "Bike",
+        "price": 100,
+        "quantity": 50
     }
 ]

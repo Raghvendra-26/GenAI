@@ -1,5 +1,6 @@
 from storage.json_store import load_json,save_json
 from utils.logger import logger
+from utils.arg_parser import parse_flags
 from core.user_ops import validate_user
 import sys
 
@@ -22,20 +23,13 @@ def add_user():
     users = load_json(file_path)
     
     args = sys.argv[2:]
-    flags = {}
-    i = 0
     
-    while i < len(args):
-        
-        if i + 1 >= len(args):
-            logger.error(f"Missing value for flag {args[i]}")
-            return
-
-        key = args[i]
-        value = args[i+1]
-        clean_key = key.lstrip('-')
-        flags[clean_key] = value
-        i += 2
+    #flag parser
+    try:
+        flags = parse_flags(args)
+    except ValueError as e:
+        logger.error(str(e))
+        return
     
     required = ["name","age","email"]
     for r in required:

@@ -23,5 +23,10 @@
         "name": "Mamta",
         "age": 45,
         "email": "mkanwar1180@gmail.com"
+    },
+    {
+        "name": "Pulkit",
+        "age": 23,
+        "email": "pulkit@gmail.com"
     }
 ]
