@@ -1,4 +1,5 @@
 from storage.json_store import load_json, save_json
+from core.product_ops import calculate_inventory
 from utils.logger import logger
 import sys
 
@@ -49,13 +50,6 @@ def inventory_value():
     if not products:
         logger.error("No products in inventory")
         return
-    
-    total_inventory_value = 0
-    
-    for product in products:
-        price = product.get("price",0)
-        quantity = product.get("quantity",0)
 
-        total_inventory_value += price * quantity
-        
-    logger.info("Total inventory value: %s",total_inventory_value)
+    total = calculate_inventory(products)      
+    logger.info("Total inventory value: %s",total)

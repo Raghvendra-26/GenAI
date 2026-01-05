@@ -1,5 +1,6 @@
 from storage.json_store import load_json,save_json
 from utils.logger import logger
+from core.user_ops import validate_user
 import sys
 
 file_path = "data/users.json"
@@ -43,13 +44,19 @@ def add_user():
             return
     
     try:
-        age = int(flags["age"])
+        flags["age"] = int(flags["age"])
     except ValueError:
         logger.error("Age must be a number")
         return
     
-    flags["age"] = age
+    #validation
+    try:
+        validate_user(flags)
+    except ValueError as e:
+        logger.error(str(e))
+        return
     
     users.append(flags)
     
     save_json(file_path,users)
+    logger.info("User added successfully")

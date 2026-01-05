@@ -1,4 +1,5 @@
 from storage.json_store import load_json,save_json
+from core.marks_ops import calculate_marks_summary
 from utils.logger import logger
 import sys
 
@@ -43,12 +44,7 @@ def marks_summary():
         logger.error("No marks data found")
         return
     
-    total_marks = 0
-    
-    for mark in marks:
-        total_marks += mark
-    
-    average_marks = total_marks/len(marks)
+    total_marks,average_marks = calculate_marks_summary(marks)
 
     logger.info("Total marks: %s",total_marks)
     logger.info("Average marks: %s",average_marks)
