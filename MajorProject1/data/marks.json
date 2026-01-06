@@ -1,11 +1,18 @@
 [
-    95,
-    99,
-    99,
-    90,
-    60,
-    50,
-    56,
-    100,
-    5
+    {
+        "name": "Raghvendra",
+        "score": 90
+    },
+    {
+        "name": "Pulkit",
+        "score": 85
+    },
+    {
+        "name": "Rohit",
+        "score": 70
+    },
+    {
+        "name": "Aryan",
+        "score": 80
+    }
 ]

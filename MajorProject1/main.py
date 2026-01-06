@@ -4,6 +4,7 @@ from commands.user_commands import list_users,add_user
 from commands.marks_commands import add_mark,marks_summary
 from commands.product_commands import add_product,inventory_value
 from utils.logger import logger
+from commands.ai_commands import summarize_users_command,summarize_marks_command
 
 def main():
     if len(sys.argv) < 2 :
@@ -24,6 +25,10 @@ def main():
         add_product()
     elif command == "inventory-value":
         inventory_value()
+    elif command == "summarize-users":
+        summarize_users_command()
+    elif command == "summarize-marks":
+        summarize_marks_command()
     else:
         print("Unknown command")
         
